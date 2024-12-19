@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Check if the script is executable
+if [[ ! -x "$0" ]]; then
+  echo "Making the script executable..."
+  chmod +x "$0"
+fi
+
 # Check if a project name is provided
 if [ -z "$1" ]; then
   echo "Usage: $0 <project-name>"
